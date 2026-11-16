@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digigenius Academy offers online courses in Computer Skills, Amazon, Trading, Artificial Intelligence, and Web Development.">
+    <meta name="theme-color" content="#05060f">
+    <title>Digigenius Academy | Online Learning Institute</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Page Loader (screen in) -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-ring"></div>
+        <p class="loader-text">Digigenius<span>Academy</span></p>
+    </div>
+
+    <!-- Animated Background Layers -->
+    <div class="bg-layer" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <canvas id="bgCanvas"></canvas>
+    </div>
+
+    <!-- Cursor Effects -->
+    <canvas id="trailCanvas" aria-hidden="true"></canvas>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Navbar Section -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Digigenius<span>Academy</span></a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
+                <li class="nav-item"><a href="#mentors" class="nav-link">Mentors</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-image-wrap reveal" data-reveal="zoom">
+                    <span class="pulse-ring"></span>
+                    <span class="pulse-ring delay"></span>
+                    <div class="hero-image-ring">
+                        <img src="images/logo.jpg" alt="Digigenius Academy Logo" class="hero-image">
+                    </div>
+                </div>
+
+                <h1 class="hero-title reveal" data-reveal="up" style="--d:.1s">
+                    Welcome to <span class="gradient-text">Digigenius Academy</span>
+                </h1>
+                <h2 class="hero-subtitle reveal" data-reveal="up" style="--d:.2s">
+                    Learn <span class="typed" id="typed"></span><span class="caret"></span>
+                </h2>
+                <p class="hero-description reveal" data-reveal="up" style="--d:.3s">
+                    Join the best online learning institute and develop
+                    practical skills in Computer, Amazon, Trading, AI,
+                    and Web Development.
+                </p>
+                <div class="hero-actions reveal" data-reveal="up" style="--d:.4s">
+                    <a href="#contact" class="hero-button magnetic">Contact Us</a>
+                    <a href="#courses" class="hero-button ghost magnetic">Explore Courses</a>
+                </div>
+            </div>
+            <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="glass-panel reveal" data-reveal="up">
+                <h2 class="section-title">About Digigenius Academy</h2>
+                <p class="about-description">
+                    Digigenius Academy is a leading online learning institute
+                    dedicated to helping students build successful careers
+                    through modern digital skills and practical education.
+                </p>
+                <p class="about-description">
+                    Our mission is to provide quality education, expert guidance,
+                    and career-focused training. Whether you are a beginner or
+                    want to improve your skills, we help you move towards success.
+                </p>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <h2 class="section-title reveal" data-reveal="up">Our Popular Courses</h2>
+            <p class="courses-intro reveal" data-reveal="up" style="--d:.1s">Choose your course and start learning today!</p>
+
+            <div class="course-list">
+                <article class="course-card tilt reveal" data-reveal="up" style="--d:.0s">
+                    <span class="card-icon">💻</span>
+                    <h3 class="course-title">Computer Skills</h3>
+                    <p class="course-description">Learn basic computer skills, MS Office, internet, and essential digital tools.</p>
+                </article>
+
+                <article class="course-card tilt reveal" data-reveal="up" style="--d:.1s">
+                    <span class="card-icon">📦</span>
+                    <h3 class="course-title">Amazon</h3>
+                    <p class="course-description">Learn Amazon FBA, product research, wholesale, and e-commerce business skills.</p>
+                </article>
+
+                <article class="course-card tilt reveal" data-reveal="up" style="--d:.2s">
+                    <span class="card-icon">📈</span>
+                    <h3 class="course-title">Trading</h3>
+                    <p class="course-description">Understand market basics, technical analysis, risk management, and trading strategies.</p>
+                </article>
+
+                <article class="course-card tilt reveal" data-reveal="up" style="--d:.3s">
+                    <span class="card-icon">🤖</span>
+                    <h3 class="course-title">Artificial Intelligence</h3>
+                    <p class="course-description">Explore AI tools, prompt engineering, automation, and modern AI technologies.</p>
+                </article>
+
+                <article class="course-card tilt reveal" data-reveal="up" style="--d:.4s">
+                    <span class="card-icon">🌐</span>
+                    <h3 class="course-title">Web Development</h3>
+                    <p class="course-description">Build websites using HTML, CSS, JavaScript, and modern web development skills.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Mentors Section -->
+        <section id="mentors" class="mentors">
+            <h2 class="section-title reveal" data-reveal="up">Meet Our Expert Mentors</h2>
+            <p class="mentors-intro reveal" data-reveal="up" style="--d:.1s">Learn from experienced professionals who guide you towards success.</p>
+
+            <div class="mentor-list">
+                <article class="mentor-card tilt reveal" data-reveal="up" style="--d:.0s">
+                    <div class="mentor-image-wrap">
+                        <img src="images/11.png" alt="Computer Skills Mentor" class="mentor-image">
+                    </div>
+                    <h3 class="mentor-name">Computer Skills Mentor</h3>
+                    <p class="mentor-description">An experienced instructor helping students develop essential computer and digital skills.</p>
+                </article>
+
+                <article class="mentor-card tilt reveal" data-reveal="up" style="--d:.15s">
+                    <div class="mentor-image-wrap">
+                        <img src="images/22.png" alt="Amazon and Trading Mentor" class="mentor-image">
+                    </div>
+                    <h3 class="mentor-name">Amazon &amp; Trading Mentor</h3>
+                    <p class="mentor-description">A professional trainer teaching e-commerce strategies and trading fundamentals.</p>
+                </article>
+
+                <article class="mentor-card tilt reveal" data-reveal="up" style="--d:.3s">
+                    <div class="mentor-image-wrap">
+                        <img src="images/33.png" alt="AI and Web Development Mentor" class="mentor-image">
+                    </div>
+                    <h3 class="mentor-name">AI &amp; Web Development Mentor</h3>
+                    <p class="mentor-description">A technology instructor guiding students in AI tools and website development.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title reveal" data-reveal="up">Contact Us</h2>
+            <p class="contact-description reveal" data-reveal="up" style="--d:.1s">Have questions? Send us a message and start your learning journey!</p>
+
+            <form action="#" method="post" class="contact-form reveal" data-reveal="up" style="--d:.2s" id="contactForm">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+
+                <label for="message" class="form-label">Your Message</label>
+                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="form-button magnetic">Send Message</button>
+                <p class="form-status" id="formStatus" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p class="footer-text">&copy; 2026 Digigenius Academy. All Rights Reserved.</p>
+        <p class="footer-tagline">Learn Today, Lead Tomorrow!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
